@@ -12,12 +12,7 @@ def main():
     args = parser.parse_args()
 
     lines = sys.stdin.readlines()
-
-    data = ""
-    for line in lines:
-        data = data.join(line)
-
-    obj = json.loads(data)
+    obj = json.loads("".join(lines))
 
     host = obj['entity']['metadata']['name']
     check_name = obj['check']['metadata']['name']
