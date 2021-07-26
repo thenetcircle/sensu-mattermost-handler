@@ -37,11 +37,11 @@ def main():
     payload = {
         "username": "SensuGo-Bot",
         "icon_url": "https://raw.githubusercontent.com/sensu/web/828c7a0c2a6abb7ea215ca6ded903ba26045f542/logo.png",
-        "text": f"| **Server** | **{host}** |\n" +
-                f"| Check | {check_name} |\n" +
-                f"| Output | {message} |\n" +
-                f"| Occurrences | {occurrences} |\n" +
-                f"| Status | {status} |\n"
+        "text": "| **Server** | **" + host + "** |\n" +
+                "| Check | " + check_name + " |\n" +
+                "| Output | " + message + " |\n" +
+                "| Occurrences | " + occurrences + " |\n" +
+                "| Status | " + status + " |\n"
     }
 
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
