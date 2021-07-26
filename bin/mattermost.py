@@ -16,10 +16,10 @@ def main():
 
     host = obj['entity']['metadata']['name']
     check_name = obj['check']['metadata']['name']
-    message = obj['check']['output']
-    occurrences = obj['check']['occurrences']
+    message = obj['check']['output'].rstrip('\n')
+    occurrences = str(obj['check']['occurrences'])
+    status = obj['check']['status']
 
-    status = obj['entity']['status']
     if status == 0:
         status = ':white_check_mark: OK'
     elif status == 1:
@@ -33,6 +33,7 @@ def main():
         "username": "SensuGo-Bot",
         "icon_url": "https://raw.githubusercontent.com/sensu/web/828c7a0c2a6abb7ea215ca6ded903ba26045f542/logo.png",
         "text": "| **Server** | **" + host + "** |\n" +
+                "|----|----|\n" +
                 "| Check | " + check_name + " |\n" +
                 "| Output | " + message + " |\n" +
                 "| Occurrences | " + occurrences + " |\n" +
