@@ -16,7 +16,7 @@ def main():
 
     host = obj['entity']['metadata']['name']
     check_name = obj['check']['metadata']['name']
-    message = obj['check']['output'].rstrip('\n')
+    message = obj['check']['output'].replace('\n', ' ')
     occurrences = str(obj['check']['occurrences'])
     status = obj['check']['status']
 
