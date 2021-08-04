@@ -1,0 +1,13 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-mattermost-handler
+  namespace: default
+spec:
+  builds:
+  - url: https://github.com/thenetcircle/sensu-mattermost-handler/releases/download/0.1.3/sensu-mattermost-handler_0.1.3_linux_amd64.tar.gz
+    sha512: e439f02ddc04823d5ab6be927b508404f12cd9e6f63a243fc3259134286962e4e575e780466a46968546f540d2fe7e5397a389bc37ce3c20e49d7221a23e72f9
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
