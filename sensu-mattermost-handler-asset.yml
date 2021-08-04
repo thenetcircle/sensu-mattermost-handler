@@ -6,8 +6,8 @@ metadata:
   namespace: default
 spec:
   builds:
-  - url: https://github.com/thenetcircle/sensu-mattermost-handler/releases/download/0.1.2/sensu-mattermost-handler_0.1.2_linux_amd64.tar.gz
-    sha512: 39561579ef2a4bd16ff99133b8496551fe481cfc023dd812e5512761d0340d4cbe935c3df12ca5c6e6c9fea2f0560cca6cbfcfd7df40807f4a46cf68e61e4ed0
+  - url: https://github.com/thenetcircle/sensu-mattermost-handler/releases/download/0.1.3/sensu-mattermost-handler_0.1.3_linux_amd64.tar.gz
+    sha512: e439f02ddc04823d5ab6be927b508404f12cd9e6f63a243fc3259134286962e4e575e780466a46968546f540d2fe7e5397a389bc37ce3c20e49d7221a23e72f9
     filters:
     - entity.system.os == 'linux'
     - entity.system.arch == 'amd64'
